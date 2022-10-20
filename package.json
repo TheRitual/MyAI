@@ -1,0 +1,27 @@
+{
+  "name": "MyAI",
+  "version": "1.0.0",
+  "description": "My concept of AI with conciusness",
+  "main": "build/index.js",
+  "repository": "https://github.com/TheRitual/MyAI.git",
+  "author": "Marcin Kawczyński <dev@theRitual.eu>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "yarn prettier --write .",
+    "build": "npx tsc",
+    "start": "node build/index.js",
+    "predev": "concurrently \"prettier --write .\" \"npx tsc\"",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\""
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.2",
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "tsc": "^2.0.4",
+    "typescript": "^4.8.4"
+  }
+}
